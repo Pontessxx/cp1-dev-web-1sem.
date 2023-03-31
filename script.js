@@ -1,26 +1,13 @@
-/*Faça um programa que recebaa idade de uma pessoa e exiba uma mensagem indicando em qual faixa etária ela se encontra: criança (até 12 anos),
-adolescente (entre 13 e 18 anos), adulto (entre 19 e 60 anos) ou idoso (mais de 60 anos). Exemplifique e demonstre a saída!  */
-
-let idade = prompt("Qual sua idade?")
-
-if (idade<=13){
-    document.write("Você é uma criança")
+let notas = [];//array estrutura de dados que permite armazenar um conjunto de valores em uma única variável.
+let soma = 0;
+for (let i = 1; i <= 7; i++) { //media calculada
+  let nota = parseFloat(prompt(`Digite a nota ${i}:`));
+  notas.push(nota);
+  soma += nota;
 }
-
-if (idade>13 && idade<=18){
-    document.write("Você é um adoslescente")
-}
-
-if (idade>19 && idade<=60){
-    document.write("Você é um adulto")
-}
-
-if(idade>60){
-    document.write("Você é um idoso")
-}
-
-
-
-
-
-
+let media = soma / 7;
+if (media >= 6) {
+  console.log(`Parabéns, você foi aprovado! Sua média foi ${media.toFixed(2)}.`);
+} else {
+  console.log(`Infelizmente você foi reprovado. Sua média foi ${media.toFixed(2)}.`);
+} 
