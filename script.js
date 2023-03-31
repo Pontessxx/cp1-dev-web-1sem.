@@ -1,20 +1,26 @@
-/*Escreva  um  programa  que  calcula  o  índice  de  massa  corporal  (IMC)  
-de  uma  pessoa  e  exibe  uma mensagem indicando se ela está abaixo, no peso ideal ou acima do peso.
- Considere as seguintes faixas de IMC:  abaixo  de  18,5  (abaixo  do  peso),
-   entre  18,5  e  24,9  (peso  ideal)  e  acima  de  24,9  (acima  do  peso).
-    Exemplifique e demonstre a saída! (10 Pontos) */
+/*Faça um programa que recebaa idade de uma pessoa e exiba uma mensagem indicando em qual faixa etária ela se encontra: criança (até 12 anos),
+adolescente (entre 13 e 18 anos), adulto (entre 19 e 60 anos) ou idoso (mais de 60 anos). Exemplifique e demonstre a saída!  */
 
-let peso = prompt("Digite seu peso: ") 
-let altura = prompt("Digite sua altura: ")
+let idade = prompt("Qual sua idade?")
 
-resultado = peso / altura**2
+if (idade<=13){
+    document.write("Você é uma criança")
+}
 
-if (resultado < 18.5){
-    document.write("você esta abaixo do peso")
+if (idade>13 && idade<=18){
+    document.write("Você é um adoslescente")
 }
-else if (resultado > 18.5 && resultado <= 24.9){
-    document.write("você esta na media normal de peso")
+
+if (idade>19 && idade<=60){
+    document.write("Você é um adulto")
 }
-else if (resultado > 24.9){
-    document.write("você esta acima do peso")
+
+if(idade>60){
+    document.write("Você é um idoso")
 }
+
+
+
+
+
+
